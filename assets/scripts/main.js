@@ -10,9 +10,32 @@ $(document).ready(function(){
             appendDots: $dots,
     
             fade: true,
-            cssEase: 'linear'
+            cssEase: 'linear',
+
+            responsive: [
+                {
+                    breakpoint: 913,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: false,
+                        fade:false,
+                        variableWidth: true
+                    }
+                },
+            ]
         });
     });
+
+    if($(window).innerWidth() <= 912) {
+        $('.tours-celebration__grid').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            variableWidth: true,
+            arrows: false
+        });
+    }
     
     $('.tours-reviews__slider').slick({
         slidesToShow: 3,
@@ -21,6 +44,15 @@ $(document).ready(function(){
 
         prevArrow: '.tours-reviews-prev',
         nextArrow: '.tours-reviews-next',
+
+        responsive: [
+            {
+                breakpoint: 913,
+                settings: {
+                    slidesToShow: 1,
+                }
+            },
+        ]
     });
 
     $('[data-tab]').on('click', function(){

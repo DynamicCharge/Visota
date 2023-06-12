@@ -248,6 +248,7 @@ body {
 .tours-list__item-img > img {
     width: 100%;
     height: 188px;
+    object-fit: cover;
 }
 .tours-list__item-info {
     background: linear-gradient(90.59deg, #F27BA6 8.8%, #5780DA 92.67%);
@@ -632,6 +633,8 @@ body {
 }
 .tours-tours__item {
     position: relative;
+    border-radius: 13px;
+    overflow: hidden;
 }
 .tours-tours__item:nth-child(1) {
     grid-row-start: 1;
@@ -869,6 +872,9 @@ body {
 .tours-tags {
     padding-bottom: 40px;
 }
+.tours-tags .tours-filter__custom-check {
+    background: #F1F1F3;
+}
 .tours-tags__wrapper {
     display: grid;
     grid-template-columns: 172px auto;
@@ -988,4 +994,157 @@ body {
     border-radius: 50%;
     background: #FF006A;
     opacity: 0;
+}
+
+.tours-list__show,
+.tours-list__btn {
+    display: none;
+}
+
+@media screen and (max-width: 1160px) {
+    .new-container {
+        padding-left: 20px;
+        padding-right: 20px;
+        box-sizing: border-box;
+    }  
+    .tours-list {
+        background: #F1F1F3;
+        border-radius: 13px; 
+        padding-top: 60px;
+        padding-bottom: 18px;       
+    } 
+    .tours-list__list {
+        grid-template-columns: repeat(auto-fit, 155px);
+        width: 100%;
+    }
+    .tours-list__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .tours-list__show,
+    .tours-list__btn {
+        display: inline-block;
+    }
+    .tours-list__show {
+        margin-top: 20px;
+    }
+    .tours-list__btn {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 912px) {
+    .tours-title__slider {
+        margin-left: -8px;
+        margin-right: -8px;
+    }
+    .tours-title__slide {
+        grid-template-columns: 1fr;
+        margin: 0 8px;
+        max-width: 266px;
+        width: 100%;
+    }
+    .tours-title__slide-left {
+        border-radius: 13px;
+    }
+    .tours-title__slide-right {
+        background: transparent;
+        padding: 18px 10px;
+    }
+    .tours-title__dots {
+        display: none;
+    }
+    .tours-questions__wrap {
+        grid-template-columns: 1fr 1fr;
+    }
+    .tours-questions__item.--first {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        gap: 35px 0;
+    }
+    .tours-questions__item {
+        grid-template-columns: 1fr;
+        gap: 0;
+        position: relative;
+    }
+    .tours-questions__item-img {
+        margin-left: auto;
+        margin-bottom: 10px;
+    }
+    .tours-questions__text {
+        font-size: 13px;
+        line-height: 22px;        
+    }
+    .tours-questions__graduation-stars img:not(:last-child) {
+        margin-right: 5px;
+    }
+    .tours-questions__desc {
+        font-size: 13px;
+        line-height: 22px;        
+    }
+    .tours-filter__form-box.--grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .tours-celebration__grid {
+        display: block;
+        margin-right: -8px;
+        margin-left: -8px;
+    }
+    .tours-celebration__grid-item {
+        max-width: 266px;
+        width: 100%;
+        margin: 0 8px;
+    }
+    .tours-tours__grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+    .tours-tours__item:nth-child(1),
+    .tours-tours__item:nth-child(8) {
+        grid-row-start: initial;
+        grid-row-end: initial;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .tours-tours__item:nth-child(8) {
+        grid-row-start: 4;
+        grid-row-end: 6;
+    }
+    .tours-tours__item img {
+        height: 180px;
+        object-fit: cover;
+    }
+    .tours-title.--only .tours-title__slide {
+        max-width: 100%;
+    }
+    .tours-faq {
+        display: none;
+    }
+    .tours-reviews__controlls {
+        display: none;
+    }
+    .tours-another-filter__wrap {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .tours-another-filter__subhead {
+        text-align: center;
+    }
+    .tours-another-filter__form {
+        justify-content: center;
+    }
+    .tours-tags__wrapper {
+        grid-template-columns: 1fr;
+    }
+    .tours-tags__form-wrap {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .tours-tags__form .new-btn:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
 }
