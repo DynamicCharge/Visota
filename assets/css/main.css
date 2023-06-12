@@ -1001,6 +1001,16 @@ body {
     display: none;
 }
 
+.sitemap {
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 100px 0;
+}
+.sitemap__item:not(:last-child) {
+    margin-bottom: 15px;
+}
+
 @media screen and (max-width: 1160px) {
     .new-container {
         padding-left: 20px;
