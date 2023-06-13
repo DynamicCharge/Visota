@@ -22,6 +22,10 @@
         <section class="tours-list --filters">
             <div class="new-container">
                 <h2 class="tours-list__header new-h2">топ-10 туров из москвы</h2>
+                <div class="tours-list__nav">
+                    <span class="tours-list__count">261 экскурсий</span>
+                    <div class="tours-list__filter-trigger"><img src="./assets/img/filter-ico.svg" alt="">Фильтры</div>
+                </div>
                 <div class="tours-list__wrapper">
                     <ul class="tours-list__list">
                         <li class="tours-list__item">
@@ -190,8 +194,8 @@
                     <div class="tours-list__filters">
                         <div class="tours-list__folters-form">
                             <div class="tours-list__folters-form__wrap">
-                                <div class="tours-list__box">
-                                    <h4 class="tours-list__form-header">По классам</h4>
+                                <div class="tours-list__box" data-acc-parent>
+                                    <h4 class="tours-list__form-header" data-acc-trigger>По классам</h4>
                                     <div class="tours-list__content --r4">
                                         <label class="tours-list__label">
                                             <input type="checkbox" class="tours-list__check">
@@ -250,8 +254,8 @@
                                         </label>
                                     </div>
                                 </div>
-                                <div class="tours-list__box">
-                                    <h4 class="tours-list__form-header">По месяцам</h4>
+                                <div class="tours-list__box" data-acc-parent>
+                                    <h4 class="tours-list__form-header" data-acc-trigger>По месяцам</h4>
                                     <div class="tours-list__content --c2">
                                         <label class="tours-list__label">
                                             <input type="checkbox" class="tours-list__check">
@@ -315,8 +319,8 @@
                                         </label>
                                     </div>
                                 </div>
-                                <div class="tours-list__box">
-                                    <h4 class="tours-list__form-header">Продолжительность</h4>
+                                <div class="tours-list__box" data-acc-parent>
+                                    <h4 class="tours-list__form-header" data-acc-trigger>Продолжительность</h4>
                                     <div class="tours-list__content --c2">
                                         <label class="tours-list__label">
                                             <input type="checkbox" class="tours-list__check">
@@ -345,8 +349,8 @@
                                         </label>
                                     </div>
                                 </div>
-                                <div class="tours-list__box">
-                                    <h4 class="tours-list__form-header">По предметам </h4>
+                                <div class="tours-list__box" data-acc-parent>
+                                    <h4 class="tours-list__form-header" data-acc-trigger>По предметам </h4>
                                     <div class="tours-list__content --c2">
                                         <label class="tours-list__label">
                                             <input type="checkbox" class="tours-list__check">
@@ -415,8 +419,8 @@
                                         </label>
                                     </div>
                                 </div>
-                                <div class="tours-list__box">
-                                    <h4 class="tours-list__form-header">По предметам </h4>
+                                <div class="tours-list__box" data-acc-parent>
+                                    <h4 class="tours-list__form-header" data-acc-trigger>По районам </h4>
                                     <div class="tours-list__content --r4">
                                         <label class="tours-list__label">
                                             <input type="checkbox" class="tours-list__check">
@@ -429,6 +433,10 @@
                                             <span>ЮЗАО</span>
                                         </label>
                                     </div>
+                                </div>
+                                <div class="tours-list__filter-btns">
+                                    <button class="tours-list__reset new-btn">Сбросить</button>
+                                    <button class="tours-list__submit new-btn">Применить</button>
                                 </div>
                             </div>
                             

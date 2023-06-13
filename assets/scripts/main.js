@@ -36,6 +36,32 @@ $(document).ready(function(){
             arrows: false
         });
     }
+
+    $('.tours-list__filter-trigger').on('click', function(){
+        if($(this).hasClass('_active')) {
+            $(this).removeClass('_active');
+            $('.tours-list__filters').removeClass('_active').slideUp(300);
+        } else {
+            $(this).addClass('_active');
+            $('.tours-list__filters').addClass('_active').slideDown(300);
+        }
+    });
+
+    $('[data-acc-trigger]').on('click', function(){
+        let $this = $(this),
+        $parent = $this.parent('[data-acc-parent]'),
+        $list = $parent.children('[data-acc-list]');
+
+        if($this.hasClass('_active')) {
+            $this.removeClass('_active');
+            $parent.removeClass('_active');
+            $list.removeClass('_active').slideUp(300);
+        } else {
+            $this.addClass('_active');
+            $parent.addClass('_active');
+            $list.addClass('_active').slideDown(300);
+        }
+    });
     
     $('.tours-reviews__slider').slick({
         slidesToShow: 3,
