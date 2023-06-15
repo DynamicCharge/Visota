@@ -28,14 +28,28 @@ $(document).ready(function(){
         });
     });
 
-    if($(window).innerWidth() <= 912) {
-        $('.tours-celebration__grid').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            variableWidth: true,
-            arrows: false
-        });
-    }
+        $('.tours-celebration__grid').each(function() {
+            let $this = $(this);
+            $this.slick({
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                dots: false,
+                prevArrow: $this.parents('.tours-celebration__wrapper').find('.tours-reviews-prev'),
+                nextArrow: $this.parents('.tours-celebration__wrapper').find('.tours-reviews-next'),
+
+                responsive: [
+                    {
+                        breakpoint: 913,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            variableWidth: true,
+                            arrows: false,
+                        }
+                    }
+                ]
+            });
+        })
 
     $('.tours-list__filter-trigger').on('click', function(){
         if($(this).hasClass('_active')) {
@@ -63,22 +77,24 @@ $(document).ready(function(){
         }
     });
     
-    $('.tours-reviews__slider').slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        dots: false,
-
-        prevArrow: '.tours-reviews-prev',
-        nextArrow: '.tours-reviews-next',
-
-        responsive: [
-            {
-                breakpoint: 913,
-                settings: {
-                    slidesToShow: 1,
-                }
-            },
-        ]
+    $('.tours-reviews__slider').each(function(){
+        $(this).slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            dots: false,
+    
+            prevArrow: $(this).parents('.tours-reviews').find('.tours-reviews-prev'),
+            nextArrow: $(this).parents('.tours-reviews').find('.tours-reviews-next'),
+    
+            responsive: [
+                {
+                    breakpoint: 913,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                },
+            ]
+        })
     });
 
     $('[data-tab]').on('click', function(){

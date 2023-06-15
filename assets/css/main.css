@@ -116,6 +116,9 @@ body {
     background: #FF006A;
     border-radius: 13px;    
 }
+.--bebas {
+    font-family: 'Bebas Neue';
+}
 
 .tours-title {
     margin-bottom: 18px;
@@ -181,6 +184,18 @@ body {
     
     color: #0E4365;
     margin-bottom: 8px;
+}
+.tours-title__name.--bebas {
+    font-size: 24px;
+    line-height: 30px;
+}
+.tours-title__block {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    grid-auto-flow: column;
+    gap: 10px;
+    margin-bottom: 21px;
 }
 .tours-title__text {
     font-style: normal;
@@ -350,7 +365,15 @@ body {
     justify-content: end;
     flex-direction: column;
 }
-
+.tours-questions__item.--first .tours-questions__text {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    
+    /* or 147% */
+    
+    color: #343C44;    
+}
 .tours-questions__item {
     padding: 35px 32px;
     background: #F1F1F3;
@@ -360,13 +383,13 @@ body {
     display: grid;
     grid-template-columns: 113px 77px;
     justify-content: space-between;
-    gap: 72px 0;
+    gap: 19px 0;
 }
 .tours-questions__item.--first {
     display: grid;
     grid-template-columns: repeat(2, 160px);
     justify-content: space-between;
-    gap: 72px 0;
+    gap: 60px 0;
 }
 .tours-questions__item-name {
     font-family: 'Bebas Neue';
@@ -401,7 +424,9 @@ body {
 }
 
 .tours-questions__graduation {
-
+display: flex;
+justify-content: end;
+flex-direction: column;
 }
 .tours-questions__graduation-stars {
     display: flex;
@@ -487,6 +512,10 @@ body {
     background: #FF006A;
     color: #fff;
 }
+.tours-filter__custom-check:hover {
+    background: #FF006A;
+    color: #fff;
+}
 .tours-filter__custom-check {
     padding: 5px 11px;
     background: #FFFFFF;
@@ -497,7 +526,9 @@ body {
     font-size: 16px;
     line-height: 22px;
     /* or 138% */
-    color: #0E4365;    
+    color: #0E4365;   
+    
+    transition: .3s;
 }
 .tours-filter__form-box.--grid {
     display: grid;
@@ -535,7 +566,7 @@ body {
 }
 
 .tours-celebration {
-    padding: 30px 0 40px;
+    padding: 60px 0 40px;
 }
 .tours-celebration.--bg .new-container {
     position: relative;
@@ -552,6 +583,14 @@ body {
 .tours-celebration__wrapper {
     position: relative;
     z-index: 1;
+}
+.tours-celebration__wrapper:not(:last-child) {
+    margin-bottom: 50px;
+}
+.tours-celebration__headline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .tours-celebration__header {
     text-align: left;
@@ -573,6 +612,9 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
+}
+.tours-celebration__grid.slick-initialized {
+    display: block;
 }
 .tours-celebration__grid-item {
 
@@ -696,7 +738,8 @@ body {
     letter-spacing: 0.08em;
     text-transform: uppercase;
     
-    color: #0E4365;   
+    color: #0E4365;  
+    cursor: pointer; 
 }
 .tours-faq__tab._active {
     color: #FF006A;    
@@ -705,12 +748,30 @@ body {
     margin-bottom: 10px;
 }
 .tours-faq__wrap {
-
+    max-height: 384px;
+    height: 100%;
 }
 .tours-faq__content {
     padding-right: 100px;
     overflow-y: auto;
+    height: 384px;
+
+    scrollbar-width: thin;
+    scrollbar-color: #FF006A #F1F1F3;    
 }
+
+.tours-faq__content::-webkit-scrollbar {
+    width: 12px;               /* ширина всей полосы прокрутки */
+}
+.tours-faq__content::-webkit-scrollbar-track {
+    background: #F1F1F3;        /* цвет зоны отслеживания */
+}
+.tours-faq__content::-webkit-scrollbar-thumb {
+    background-color: #FF006A;    /* цвет бегунка */
+    border-radius: 20px;       /* округлось бегунка */
+    border: 3px solid #FF006A;  /* отступ вокруг бегунка */
+}
+
 .tours-faq__content:not(._active) {
     display: none;
 }
@@ -733,7 +794,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 38px;
 }
 .tours-reviews__header {
 
